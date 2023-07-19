@@ -244,7 +244,6 @@
     "results": [
         {
             "id": 2,
-            "overage_energy": 10,
             "title": "星星電力是銷售綠電最多的再生能源售電業者",
             "sub_title": "只要填寫減碳目標、用電量，就能獲取再生能源搭配的最佳化綠電方案，為企業客製 ESG 全方位綠能整合規劃。",
             "total_capacity": 385182,
@@ -257,12 +256,12 @@
             "total_metrics": 14257,
             "total_trec": 45975,
             "emmited_energy": 90,
+            "overage_energy": 10,
             "data_rate": 1,
             "type_of_generation": 3
         },
         {
             "id": 1,
-            "overage_energy": 10,
             "title": "星星電力是銷售綠電最多的再生能源售電業者",
             "sub_title": "只要填寫減碳目標、用電量，就能獲取再生能源搭配的最佳化綠電方案，為企業客製 ESG 全方位綠能整合規劃。",
             "total_capacity": 385182,
@@ -275,6 +274,7 @@
             "total_metrics": 14257,
             "total_trec": 45975,
             "emmited_energy": 90,
+            "overage_energy": 10,
             "data_rate": 1,
             "type_of_generation": 3
         }
