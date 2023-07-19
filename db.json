@@ -1,14 +1,240 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
+  "buy_energy": {
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "name": "postman2",
+            "company": "hd",
+            "email": "833@hd.com",
+            "phone": "0225",
+            "remark": "postman 測試",
+            "date_updated": "2023-07-19T05:45:09.228693Z",
+            "date_created": "2023-07-19T05:45:09.228725Z",
+            "need": 1000,
+            "client_billing_type": 1,
+            "client_time_type": 1,
+            "client_type": 1,
+            "client_voltage_type": 3,
+            "estimated_transfer_date": "2023-07-07",
+            "is_multi_clients": false,
+            "target_re": 3,
+            "days_since_created": 0
+        },
+        {
+            "id": 2,
+            "name": "postman-3",
+            "company": "hd",
+            "email": "833@hd.com",
+            "phone": "0225",
+            "remark": "postman 測試",
+            "date_updated": "2023-07-19T05:45:36.451114Z",
+            "date_created": "2023-07-19T05:45:36.451141Z",
+            "need": 1000,
+            "client_billing_type": 1,
+            "client_time_type": 1,
+            "client_type": 1,
+            "client_voltage_type": 3,
+            "estimated_transfer_date": "2023-07-07",
+            "is_multi_clients": false,
+            "target_re": 3,
+            "days_since_created": 0
+        }
+    ]
+  },
+  "options": {
+    "name": "Buy Energy List",
+    "description": "",
+    "renders": [
+        "application/json",
+        "text/html"
+    ],
+    "parses": [
+        "application/json",
+        "application/x-www-form-urlencoded",
+        "multipart/form-data"
+    ],
+    "actions": {
+        "POST": {
+            "id": {
+                "type": "integer",
+                "required": false,
+                "read_only": true,
+                "label": "ID"
+            },
+            "name": {
+                "type": "string",
+                "required": true,
+                "read_only": false,
+                "label": "名字",
+                "max_length": 50
+            },
+            "company": {
+                "type": "string",
+                "required": true,
+                "read_only": false,
+                "label": "公司名稱",
+                "max_length": 50
+            },
+            "email": {
+                "type": "email",
+                "required": true,
+                "read_only": false,
+                "label": "E-mail",
+                "max_length": 254
+            },
+            "phone": {
+                "type": "string",
+                "required": true,
+                "read_only": false,
+                "label": "電話號碼",
+                "max_length": 20
+            },
+            "remark": {
+                "type": "string",
+                "required": true,
+                "read_only": false,
+                "label": "附註說明",
+                "max_length": 200
+            },
+            "date_updated": {
+                "type": "datetime",
+                "required": false,
+                "read_only": true,
+                "label": "Date updated"
+            },
+            "date_created": {
+                "type": "datetime",
+                "required": false,
+                "read_only": true,
+                "label": "Date created"
+            },
+            "need": {
+                "type": "integer",
+                "required": true,
+                "read_only": false,
+                "label": "綠電需求量(年度預估用電量)"
+            },
+            "client_billing_type": {
+                "type": "choice",
+                "required": false,
+                "read_only": false,
+                "label": "計價方式",
+                "choices": [
+                    {
+                        "value": 1,
+                        "display_name": "二段式"
+                    },
+                    {
+                        "value": 2,
+                        "display_name": "三段式"
+                    }
+                ]
+            },
+            "client_time_type": {
+                "type": "choice",
+                "required": false,
+                "read_only": false,
+                "label": "時間電價",
+                "choices": [
+                    {
+                        "value": 1,
+                        "display_name": "時間電價"
+                    },
+                    {
+                        "value": 2,
+                        "display_name": "非時間電價"
+                    }
+                ]
+            },
+            "client_type": {
+                "type": "choice",
+                "required": false,
+                "read_only": false,
+                "label": "用電型態",
+                "choices": [
+                    {
+                        "value": 1,
+                        "display_name": "全日白天"
+                    },
+                    {
+                        "value": 2,
+                        "display_name": "全日半天"
+                    },
+                    {
+                        "value": 3,
+                        "display_name": "全日全天"
+                    }
+                ]
+            },
+            "client_voltage_type": {
+                "type": "choice",
+                "required": false,
+                "read_only": false,
+                "label": "電壓",
+                "choices": [
+                    {
+                        "value": 1,
+                        "display_name": "特高壓"
+                    },
+                    {
+                        "value": 2,
+                        "display_name": "高壓"
+                    },
+                    {
+                        "value": 3,
+                        "display_name": "低壓"
+                    }
+                ]
+            },
+            "estimated_transfer_date": {
+                "type": "date",
+                "required": false,
+                "read_only": false,
+                "label": "預計轉供日"
+            },
+            "is_multi_clients": {
+                "type": "boolean",
+                "required": false,
+                "read_only": false,
+                "label": "單一電號多用戶"
+            },
+            "target_re": {
+                "type": "choice",
+                "required": false,
+                "read_only": false,
+                "label": "綠電需求目標",
+                "choices": [
+                    {
+                        "value": 1,
+                        "display_name": "RE100倡議"
+                    },
+                    {
+                        "value": 2,
+                        "display_name": "用電大戶義務"
+                    },
+                    {
+                        "value": 3,
+                        "display_name": "淨零減碳目標"
+                    },
+                    {
+                        "value": 4,
+                        "display_name": "其他"
+                    }
+                ]
+            },
+            "days_since_created": {
+                "type": "field",
+                "required": false,
+                "read_only": true,
+                "label": "Days since created"
+            }
+        }
+    }
+  },
   "profile": {
-    "name": "typicode"
+    "name": "gorilla-json"
   }
 }
