@@ -235,7 +235,10 @@
     }
   },
   "profile": {
-    "name": "gorilla-json"
+    "company": "泓德能源",
+    "name": "Rex Wu",
+    "email": "rex.wu@hdrenewables.com",
+    "phone": "718"
   },
   "main_kanban": {
     "count": 2,
@@ -279,11 +282,5 @@
             "type_of_generation": 3
         }
     ]
-  },
-  "user_info":{
-    "company": "泓德能源",
-    "name": "Rex Wu",
-    "email": "rex.wu@hdrenewables.com",
-    "phone": "718"
   }
 }
